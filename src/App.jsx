@@ -1,17 +1,13 @@
 import "./App.css";
 import { useSelector , useDispatch } from "react-redux";
-import { randomNameIncreement } from "./Redux/randomName/RandomNameSlice";
+import ShopingCart from "../projects/shopingCart/ShopingCart";
 function App() {
-  const R_name = useSelector((state) => state.randomName.value); 
-  const dispatch = useDispatch();
-  return (
-    <>
-      <div>
-        <h2>your random name : {R_name} </h2>
-        <button onClick={()=>dispatch(randomNameIncreement())} >random name get</button>
-      </div>
-    </>
-  );
+ return(  
+  <div>
+
+    <ShopingCart/>
+  </div>
+ )
 }
 
 export default App;
